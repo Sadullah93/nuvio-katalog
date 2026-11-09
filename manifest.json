@@ -1,0 +1,67 @@
+{
+  "id": "com.sadullah.4k.katalog",
+  "version": "1.0.0",
+  "name": "Sadullah'ın 4K Sineması",
+  "description": "Türkçe Film ve Dizi Kataloğu (4K, 1080p, HDR)",
+  "resources": ["catalog", {"name": "meta", "types": ["movie", "series"], "idPrefixes": ["tt", "tmdb:"]}],
+  "types": ["movie", "series"],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "trending-movies",
+      "name": "🔥 Trend Filmler [4K HDR]",
+      "extra": [{"name": "skip", "isRequired": false}]
+    },
+    {
+      "type": "series",
+      "id": "trending-series",
+      "name": "🔥 Trend Diziler [1080p FULLHD]",
+      "extra": [{"name": "skip", "isRequired": false}]
+    },
+    {
+      "type": "movie",
+      "id": "popular-movies",
+      "name": "🎬 Popüler Filmler [4K]",
+      "extra": [{"name": "skip", "isRequired": false}]
+    },
+    {
+      "type": "series",
+      "id": "popular-series",
+      "name": "🎬 Popüler Diziler [1080p]",
+      "extra": [{"name": "skip", "isRequired": false}]
+    },
+    {
+      "type": "movie",
+      "id": "movies-by-language",
+      "name": "🇹🇷 Türkçe Filmler [1080p HD]",
+      "extra": [{"name": "skip", "isRequired": false}, {"name": "genre", "isRequired": false, "options": ["Turkish"], "optionsLimit": 1}]
+    },
+    {
+      "type": "series",
+      "id": "series-by-language",
+      "name": "🇹🇷 Türkçe Diziler [1080p HD]",
+      "extra": [{"name": "skip", "isRequired": false}, {"name": "genre", "isRequired": false, "options": ["Turkish"], "optionsLimit": 1}]
+    },
+    {
+      "type": "movie",
+      "id": "netflix-movies",
+      "name": "Netflix Filmleri [4K HDR]",
+      "extra": [{"name": "skip", "isRequired": false}]
+    },
+    {
+      "type": "series",
+      "id": "netflix-series",
+      "name": "Netflix Dizileri [1080p]",
+      "extra": [{"name": "skip", "isRequired": false}]
+    }
+  ],
+  "config": [
+    {"key": "language", "type": "text", "title": "Dil", "default": "tr-TR", "required": true},
+    {"key": "region", "type": "text", "title": "Bölge", "default": "TR", "required": true}
+  ],
+  "behaviorHints": {
+    "configurable": true,
+    "adult": false,
+    "p2p": false
+  }
+}
